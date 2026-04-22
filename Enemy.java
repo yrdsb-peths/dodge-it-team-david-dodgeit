@@ -5,7 +5,16 @@ public class Enemy extends Actor
     public void act()
     {        
         
-        setLocation(getX(), getY() + 5);
+        setLocation(getX(), getY() + 6);
+        
+         if(isTouching(Hero.class)) {
+            // add gameover symbol
+            getWorld().addObject(new GameOver(), 300, 200);
+            getWorld().removeObject(this); 
+            return;   
+        }
+        
+        
         
         if(getY() >= getWorld().getHeight() -1)
         {
@@ -23,11 +32,6 @@ public class Enemy extends Actor
             }
         }
         
-        if(isTouching(Hero.class)){
-            // add gameover symbol
-            GameOver gameOver = new GameOver();
-            getWorld().addObject(gameOver, 300, 200);
-            getWorld().removeObject(this); 
-        }
+       
     }
 }
