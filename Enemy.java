@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Enemy extends Actor
-{   
+{       
     public void act()
     {        
         
@@ -12,8 +12,7 @@ public class Enemy extends Actor
             int randomX = Greenfoot.getRandomNumber(getWorld().getWidth());
             setLocation(randomX, 0);
         }
-        
-        
+    
         if(Greenfoot.getRandomNumber(100) <50)
         {
             setLocation(getX(), getY() + 10);
@@ -30,6 +29,5 @@ public class Enemy extends Actor
             getWorld().addObject(gameOver, 300, 200);
             getWorld().removeObject(this); 
         }
-        
     }
 }
