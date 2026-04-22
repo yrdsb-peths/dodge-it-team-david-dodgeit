@@ -12,9 +12,10 @@ public class Animal extends Actor
         }
         
         if(isTouching(Hero.class)){
-            
+            // add gameover symbol
             GameOver gameOver = new GameOver();
             getWorld().addObject(gameOver, 300, 200);
+            getWorld().removeObject(this);
         }   
     }
         public void resetAnimal() {
@@ -25,6 +26,6 @@ public class Animal extends Actor
             setLocation(600, 300);
         }
     
-    
+        setLocation(600, 100);
     }
 }
