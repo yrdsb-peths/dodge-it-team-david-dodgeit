@@ -8,8 +8,8 @@ public class Enemy extends Actor
         
          if(isTouching(Hero.class)) {
             // add gameover symbol
-            getWorld().addObject(new GameOver(), 300, 200);
-            getWorld().removeObject(this); 
+            setImage("GameOver.png");
+            setLocation(300, 200);
             return;   
         }
         
