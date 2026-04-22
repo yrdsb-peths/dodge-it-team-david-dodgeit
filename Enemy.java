@@ -4,7 +4,6 @@ public class Enemy extends Actor
 {       
     public void act()
     {        
-        
         setLocation(getX(), getY() + 6);
         
          if(isTouching(Hero.class)) {
@@ -13,8 +12,6 @@ public class Enemy extends Actor
             getWorld().removeObject(this); 
             return;   
         }
-        
-        
         
         if(getY() >= getWorld().getHeight() -1)
         {
@@ -31,7 +28,5 @@ public class Enemy extends Actor
                 getWorld().removeObject(this);
             }
         }
-        
-       
     }
 }

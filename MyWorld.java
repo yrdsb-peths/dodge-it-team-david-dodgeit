@@ -9,5 +9,6 @@ public class MyWorld extends World {
     
         Enemy Enemy = new Enemy();
         addObject(Enemy, 300, 0);
+        
     }
 }
